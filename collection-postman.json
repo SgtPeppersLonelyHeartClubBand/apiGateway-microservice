@@ -8,10 +8,19 @@
       "name": "Customer Service",
       "item": [
         {
-          "name": "Get All Customers",
+          "name": "Create Customer",
           "request": {
-            "method": "GET",
-            "header": [],
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\"\n}"
+            },
             "url": {
               "raw": "http://localhost:8080/api/customers/",
               "protocol": "http",
@@ -53,75 +62,12 @@
           }
         },
         {
-          "name": "Create Customer",
+          "name": "Check Customer Exists",
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\"\n}"
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/customers/",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "customers"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Update Customer",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"name\": \"John Smith\",\n    \"email\": \"john.smith@example.com\"\n}"
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/customers/{id}",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "customers",
-                "{id}"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": "1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "Delete Customer",
-          "request": {
-            "method": "DELETE",
+            "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/customers/{id}",
+              "raw": "http://localhost:8080/api/customers/exists/{id}",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -130,6 +76,7 @@
               "path": [
                 "api",
                 "customers",
+                "exists",
                 "{id}"
               ],
               "variable": [
@@ -146,51 +93,6 @@
     {
       "name": "Order Service",
       "item": [
-        {
-          "name": "Get All Orders",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/orders/",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "orders"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Get Order by ID",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/orders/{id}",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "orders",
-                "{id}"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": "1"
-                }
-              ]
-            }
-          }
-        },
         {
           "name": "Create Order",
           "request": {
@@ -220,44 +122,9 @@
           }
         },
         {
-          "name": "Update Order",
+          "name": "Get Order by ID",
           "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"customerId\": 1,\n    \"orderDate\": \"2024-06-21\",\n    \"status\": \"SHIPPED\",\n    \"total\": 150.0\n}"
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/orders/{id}",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "orders",
-                "{id}"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": "1"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "Delete Order",
-          "request": {
-            "method": "DELETE",
+            "method": "GET",
             "header": [],
             "url": {
               "raw": "http://localhost:8080/api/orders/{id}",
