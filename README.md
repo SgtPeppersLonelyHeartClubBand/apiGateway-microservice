@@ -36,6 +36,8 @@ This project demonstrates a microservices architecture with an API Gateway, Orde
 
 ## Build and Run
 
+### untuk order service dan customer service harus dijalankan terpisah dari service api gateway
+
 ### Step 1: Clone the Repository
 
 ```sh
