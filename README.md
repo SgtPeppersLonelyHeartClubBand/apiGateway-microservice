@@ -39,7 +39,7 @@ This project demonstrates a microservices architecture with an API Gateway, Orde
 ### Step 1: Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/your-repo-name.git
+git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/SgtPeppersLonelyHeartClubBand/apiGateway-microservice.git)
 cd your-repo-name
 
 Step 2: Build the Services
