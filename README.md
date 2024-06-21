@@ -39,14 +39,17 @@ This project demonstrates a microservices architecture with an API Gateway, Orde
 ### Step 1: Clone the Repository
 
 ```sh
-git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/SgtPeppersLonelyHeartClubBand/apiGateway-microservice.git)
+git clone https://github.com/SgtPeppersLonelyHeartClubBand/apiGateway-microservice.git
 cd your-repo-name
+```
 
-Step 2: Build the Services
-Navigate to the root directory of the project and run the following command to build the Docker images for all services:
+### Step 2: Build the Services
+```sh
 docker-compose up --build
+```
 
-Step 3: Access the Services
+### Step 3: Access the Services
+```sh
 Once the services are up and running, you can access them via the API Gateway:
 
 API Gateway: http://localhost:8080
@@ -222,3 +225,5 @@ json
     }
   ]
 }
+
+```
